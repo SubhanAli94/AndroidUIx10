@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AndroidUIx10</string>
+    <string name="hello">Hello, Subhan Ali</string>
+    <string name="description">I\'m learning Android Development at Metaverseage Training Institute</string>
+    <string name="hit_me">Hit Me!</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_pwd">Enter Password</string>
 </resources>
