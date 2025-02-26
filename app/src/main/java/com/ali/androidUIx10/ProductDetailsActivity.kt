@@ -1,8 +1,8 @@
 package com.ali.androidUIx10
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -24,7 +24,9 @@ class ProductDetailsActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btn_book_now).setOnClickListener {
-            Toast.makeText(this, "Book Now", Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }
