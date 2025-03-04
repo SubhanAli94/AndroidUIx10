@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    tools:context=".RelFrameGridLayouts">
+
+    <!-- FrameLayout for the header with an overlay button -->
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to My App"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/headerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap Me"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"/>
+    </FrameLayout>
+
+    <!-- GridLayout for buttons -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginTop="20dp"
+        android:columnCount="1"
+        android:padding="16dp"
+        android:background="@android:color/white">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:text="Option 1"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:text="Option 2"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:text="Option 3"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:text="Option 4"/>
+    </GridLayout>
+
+</RelativeLayout>
