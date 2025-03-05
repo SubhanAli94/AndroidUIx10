@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -15,40 +16,57 @@
             android:id="@+id/toastButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Show Toast" />
+            android:text="Add Counter" />
 
         <!-- Custom Toast -->
         <Button
             android:id="@+id/snackbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Show Snack Bar" />
+            android:text="Show Total Count" />
 
         <!-- ToggleButton -->
-        <ToggleButton
-            android:id="@+id/toggleButton"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/ll_light"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textOn="ON"
-            android:textOff="OFF" />
+            android:gravity="center_vertical">
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="OFF"
+                android:textOn="ON" />
+
+            <ImageView
+                android:id="@+id/img_light"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="Snowlake"
+                android:src="@drawable/ic_snowflake"
+                app:tint="@color/black" />
+        </LinearLayout>
 
         <!-- CheckBox -->
         <CheckBox
             android:id="@+id/checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Check me" />
+            android:checked="true"
+            android:text="Show/Hide Light" />
 
         <!-- AlertDialog -->
         <Button
             android:id="@+id/alertDialogButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Show AlertDialog" />
+            android:text="Reset Counter and Light Status" />
 
         <!-- Spinner -->
         <Spinner
             android:id="@+id/spinner"
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
@@ -85,8 +103,8 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:progress="50"
-            android:max="100" />
+            android:max="60"
+            android:progress="0" />
 
     </LinearLayout>
 </ScrollView>
