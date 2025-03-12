@@ -2,19 +2,18 @@ package com.ali.androidUIx10.kotlinconcepts
 
 /*
 fun declareVariables() {
-    val name: String = "John"  // Immutable (Cannot change)
-    var age: Int = 25         // Mutable (Can change)
+Hom
+     //Type inference (Kotlin can detect types automatically)
+    val name = "John"  // Immutable (Cannot change)
+    var age = 25       // Mutable (Can change)
     age = 26
 
-    println("Name: $name, Age: $age")
-}
-*/
+    val output = "Name: $name, Age: $age"
+    println(output)
+}*/
 
 /*
 fun variablesWithExplicitTypes() {
-
-    //Type inference (Kotlin can detect types automatically)
-
     val number: Int = 10
     val pi: Double = 3.14
     val float: Float = 3.14f
@@ -40,7 +39,6 @@ fun conditionalStatements() {
     val result = if (x > 5) "Greater" else "Smaller"
 
     println(result)
-
 }
 */
 
@@ -79,6 +77,7 @@ fun whileLoop(length: Int) {
 
 /*
 fun lambdaExpressions() {
+    //A func without a name
     val sum = { a: Int, b: Int -> a - b }
     println("\nLambda Expression Result: ${sum(1, 3)}")  // Output: 8
 }
@@ -99,45 +98,57 @@ fun calculator(a: Float, b: Float, operationName: String) {
 */
 
 /*
+//Operation param is lambda expression
 fun calculator(a: Float, b: Float, operation: (Float, Float) -> Float) {
     println("Smart Calculator Result: ${operation(a, b)}")
 }
 */
 
-/*
+
 fun nullSafety(){
     var name: String? = null  // Nullable variable
     println(name?.length)  // Safe call (Avoids NullPointerException)
     println(name!!.length)  // When variable is confirmed non-null
     println(name ?: "Default Name")  // Elvis operator
 }
-*/
+
 
 //Class
 /*
 class Person(val name: String, private var age: Int) {
 
-//    init {
-//        age = if (age < 0) 0 else age
-//    }
+    init {
+        age = if (age < 0) 0 else age
+    }
 
-//    private val hobbies = mutableListOf<String>()
-//    fun addHobby(hobby: String) {
-//        hobbies.add(hobby)
-//    }
-//
-//    fun listHobbies() {
-//        println("$name's hobbies:")
-//        for (hobby in hobbies) {
-//            println("- $hobby")
-//        }
-//    }
+    private val hobbies = mutableListOf<String>()
+    fun addHobby(hobby: String) {
+        hobbies.add(hobby)
+    }
+
+    fun listHobbies() {
+        println("$name's hobbies:")
+        for (hobby in hobbies) {
+            println("- $hobby")
+        }
+    }
 
     fun introduce() {
         println("Hi, I'm $name and I'm $age years old.")
     }
 }
-*/
+ */
+
+//Data Class
+data class Person(val name: String, val age: Int){
+//    Kotlin will automatically generate the following methods:
+//
+//    toString(): Person(name=John, age=30)
+//    equals(): Compares two Person objects based on name and age.
+//    hashCode(): Based on name and age.
+//    copy(): Create a copy of the Person with an optional modification to some properties.
+}
+
 
 /*
 open class Animal {
@@ -201,6 +212,21 @@ fun main() {
 //    person.addHobby("Reading")
 //    person.addHobby("Traveling")
 //    person.listHobbies()
+
+    /*
+    //Data Class
+//    val person1 = Person("John", 30)
+//    val person2 = Person("John", 30)
+//
+//    println(person1)  // Output: Person(name=John, age=30)
+//
+//    // Check equality
+//    println(person1 == person2)  // Output: true
+//
+//    // Copy and modify
+//    val person3 = person1.copy(age = 31)
+//    println(person3)  // Output: Person(name=John, age=31)
+*/
 
     //Inheritence
 //    val dog = Dog()
