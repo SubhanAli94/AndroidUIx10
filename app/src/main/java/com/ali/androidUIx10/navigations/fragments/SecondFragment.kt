@@ -17,6 +17,7 @@ class SecondFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_second, container, false)
+
         view.findViewById<Button>(R.id.buttonBack).setOnClickListener {
             findNavController().navigate(R.id.action_secondFragment_to_homeFragment)
         }

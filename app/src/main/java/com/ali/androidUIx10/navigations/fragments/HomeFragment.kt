@@ -50,6 +50,7 @@ class HomeFragment : Fragment() {
 }
 
 class ConfirmationDialog(private val onConfirm: () -> Unit) : DialogFragment() {
+
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return AlertDialog.Builder(requireContext())
             .setTitle("Confirm Action")
@@ -63,7 +64,7 @@ class ConfirmationDialog(private val onConfirm: () -> Unit) : DialogFragment() {
 class CustomDialog : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 
-        val dialogView = layoutInflater.inflate(com.ali.androidUIx10.R.layout.custom_dialog, null)
+        val dialogView = layoutInflater.inflate(R.layout.custom_dialog, null)
         val customInput = dialogView.findViewById<EditText>(R.id.customInput)
 
         return AlertDialog.Builder(requireContext())
