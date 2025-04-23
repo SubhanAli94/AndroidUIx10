@@ -42,19 +42,6 @@ class SplashActivity : AppCompatActivity() {
         2. Background threads -> handle downloads, file saving, etc
          */
 
-        //A coroutine is a way to run long tasks in the background without freezing your app.
-        CoroutineScope(Dispatchers.Main).launch {
-            // Delay for 3 seconds
-            delay(3000)
-
-            // Navigate to main activity
-            val intent = Intent(this@SplashActivity, MainActivity::class.java)
-            startActivity(intent)
-
-            // Close splash activity to prevent going back
-            finish()
-        }
-
         //lifecycleScope is a safe space to launch coroutines in an Activity or Fragment.
         lifecycleScope.launch {
             // Delay for 3 seconds
