@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     implementation(libs.glide)
     implementation(libs.androidx.datastore.preferences)
+    implementation(libs.androidx.viewpager2)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
